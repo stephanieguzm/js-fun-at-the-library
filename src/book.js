@@ -12,33 +12,24 @@ function buildMainCharacter(name, age, pronouns) {
 
 function saveReview(criticReview, reviews) {
   if (reviews.includes(criticReview)) {
-    return reviews
+ } else {
+  reviews.push(criticReview)
   }
-    reviews.push(criticReview)
-    console.log(reviews)
-    return reviews
+//    console.log(reviews)
+  return reviews
 }
-// -----------
-//     !reviews.includes(criticReview)
-//     reviews.push(criticReview);
-//   //if the reviews array does not include the criticReview
-//   // !reviews.includes(criticReview)
-//     console.log(reviews);
-//     return reviews
-//   }
-//   ---------
-//   //then push the criticReview into the reviews array
-//     reviews.push(criticReview)
-//     console.log(reviews)
-//     return reviews
-// }
+
 
 function calculatePageCount(createTitle) {
-    return createTitle.length * 20;
-  }
+  // this calculation also returned the correct value but is it best practice?
+  // return createTitle.length * 20;
+  var pageCalc = createTitle.length * 20;
+  // console.log(pageCalc)
+  return pageCalc
+}
 
 function writeBook(bookTitle, bookCharacter, genre) {
-  numOfPages = bookTitle.length * 20;
+  var numOfPages = bookTitle.length * 20;
   return {
     title: bookTitle,
     mainCharacter: bookCharacter,
@@ -49,8 +40,7 @@ function writeBook(bookTitle, bookCharacter, genre) {
 
 
 function editBook(bookName) {
-  bookName.pageCount = bookName.pageCount * 0.75
-  return bookName.pageCount;
+  return bookName.pageCount = bookName.pageCount * 0.75
 }
 
 
