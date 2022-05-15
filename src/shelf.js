@@ -1,9 +1,10 @@
 function shelfBook(bookies, sciFiShelf) {
   if (sciFiShelf.length < 3) {
-  sciFiShelf.unshift(bookies)
+    // use .shift() based on index positions on lines 34-35
+    sciFiShelf.unshift(bookies)
 }
   // console.log(shelf)
-  return shelf
+  return sciFiShelf
 }
 
 function unshelfBook(bookies, sciFiShelf) {
@@ -17,12 +18,10 @@ function unshelfBook(bookies, sciFiShelf) {
   }
 }
 
-function listTitles(titles, bookNames) {
-
-
+function listTitles(fantasyShelf) {
 
 }
-// return the titles "Hyperion, Dune, Ender's Game"
+// return the book titles Hyperion, Dune, Ender's Game as one string
 
 
 module.exports = {
